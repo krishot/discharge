@@ -1,6 +1,6 @@
 class Patient < ActiveRecord::Base
   belongs_to :physician
-  has_many :conditions
+  belongs_to :condition
   has_many :patient_tasks
   has_many :action_tasks, :through => :patient_tasks           
   
