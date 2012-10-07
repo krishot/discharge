@@ -105,6 +105,5 @@ ActiveRecord::Schema.define(:version => 20121007035521) do
     t.datetime "updated_at",  :null => false
   end
 
-  add_index "physicians", ["patients_id"], :name => "index_physicians_on_patients_id"
 
 end
