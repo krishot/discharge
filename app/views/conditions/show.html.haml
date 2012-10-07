@@ -1,7 +1,7 @@
 - model_class = Condition
 .page-header
   %h1              
-    = link_to t('.back', :default => t("helpers.links.back")), conditions_path, :class => 'btn'  
+    = link_to t('.list_all', :default => t("helpers.links.list_all")), conditions_path, :class => 'btn'  
     = @condition.name   
     = link_to t('.edit', :default => t("helpers.links.edit")), edit_condition_path(@condition), :class => 'btn' 
 
@@ -14,7 +14,7 @@
 
 %p
   %h2
-    = "Programs"
+    = "Available Programs"
     = link_to t('.new', :default => t("helpers.links.new")), new_condition_action_program_path(@condition), :class => 'btn btn-primary'
     
   %br

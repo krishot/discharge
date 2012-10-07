@@ -19,10 +19,13 @@
     = "Condition" + ':'
     = @patient.condition
 %p
-  %strong Action Programs
+  %strong Available Action Programs
   -@patient.condition.action_programs.each do |action_program|
     = link_to action_program, action_program_path(action_program)
-
+  = form_for @patient, :html => { :class => 'form-horizontal' } do |f| 
+     
+    = f.select :action_programs, @patient.condition.action_programs.collect { |t| [t.name, t.id]}, :html_options=>{:multiple => true, :size =>5}, :class => 'select'      
+    
 .form-actions
   
 
