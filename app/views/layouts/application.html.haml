@@ -28,25 +28,18 @@
           %a.brand(href="#") Discharge
           .container.nav-collapse
             %ul.nav
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
+              %li= link_to "Patients", patients_path
+              %li= link_to "Conditions", conditions_path
+              %li= link_to "Treatment Programs", action_programs_path
 
     .container-fluid
 
       .row-fluid
-        .span3
-          .well.sidebar-nav
-            %ul.nav.nav-list
-              %li.nav-header Sidebar
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
-        .span9
+        .span12
           = yield
     
       %footer
-        %p &copy; Company 2012
+        %p &copy; JumpDaily 2012
     /
       Javascripts
       \==================================================

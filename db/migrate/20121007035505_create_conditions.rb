@@ -3,7 +3,7 @@ class CreateConditions < ActiveRecord::Migration
     create_table :conditions do |t|
       t.string :name
       t.text :description
-      t.text :url
+      t.string :url
       t.string :state
       t.string :type
       t.string :category

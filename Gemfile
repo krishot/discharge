@@ -4,7 +4,7 @@ gem 'rails', '3.2.1'
 gem 'bundler'     
 #gem 'sqlite3'     
 gem 'mysql', '2.8.1' 
-gem 'pg  
+gem 'pg'  
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
