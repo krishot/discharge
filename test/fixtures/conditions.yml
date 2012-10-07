@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  url: MyText
+  state: MyString
+  type: 
+  category: MyString
+  icd9: MyString
+  action_program: 
+  offers: 
+
+two:
+  name: MyString
+  description: MyText
+  url: MyText
+  state: MyString
+  type: 
+  category: MyString
+  icd9: MyString
+  action_program: 
+  offers: 

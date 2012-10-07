@@ -1,4 +1,26 @@
 Discharge::Application.routes.draw do
+  
+  resources :patient_tasks
+
+  resources :action_tasks
+
+  resources :action_programs
+
+  resources :conditions do
+    collection do
+      get :settings 
+      get :sync 
+      get :beat
+    end
+  end
+
+  resources :physicians
+
+  resources :patients
+  
+  match "/" => 'home#index' 
+  root :to => 'home#index'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

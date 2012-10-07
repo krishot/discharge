@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  category: MyString
+  description: MyText
+  state: MyString
+  type: 
+  therapy_id: MyString
+  condition: 
+
+two:
+  name: MyString
+  category: MyString
+  description: MyText
+  state: MyString
+  type: 
+  therapy_id: MyString
+  condition: 

@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  phone: MyString
+  description: MyText
+  state: MyString
+  engaged_at: 2012-10-06 20:33:03
+  last_contact: 2012-10-06 20:33:03
+  carepass_id: MyString
+  mhealth_id: MyString
+  physician: 
+  conditions: 
+  actions: 
+  alerts: 
+
+two:
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  phone: MyString
+  description: MyText
+  state: MyString
+  engaged_at: 2012-10-06 20:33:03
+  last_contact: 2012-10-06 20:33:03
+  carepass_id: MyString
+  mhealth_id: MyString
+  physician: 
+  conditions: 
+  actions: 
+  alerts: 

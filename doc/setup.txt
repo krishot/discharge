@@ -1,0 +1,26 @@
+
+
+Prime interface is on the iPad and iPhone.  Will do mobile ready web pages to be cross platform and simple.
+
+-  iPad is the Doctor UI to create a discharge plan       
+  - Simple add patient form (Name, email, zip, phone)
+    - Ideally pull patient data from EHR to populate profile
+    - Map to pick address if provider map required
+  - Pick from list of available therapies to assign to patient  
+    - Be more active 
+      - Open app check location prize if at park?
+    - Eat better
+      - 
+    - Take your meds
+      - enter drug, do detail lookup to API
+    - Habit modification (smoke, drink, ???)
+    - Appointment reminder
+    - Weekly result email back to Doctor
+    
+
+-  iPhone is for patient to interact with discharge plan.
+  - iOS alerts needed for medication, activity, & meal tracking to bring you to app
+  - Simple list of relevant activities at time of opening app
+    - Like simple task app with (I did it, Will do later, Won't Do)
+    - Certain tasks may require some other feedback (walked 1 mile, no extra salt at lunch)
+  - Possible message back to your doctor

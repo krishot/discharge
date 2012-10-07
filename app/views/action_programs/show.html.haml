@@ -1,0 +1,37 @@
+- model_class = ActionProgram
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human
+
+%p
+  %strong= model_class.human_attribute_name(:name) + ':'
+  %br
+  = @action_program.name
+%p
+  %strong= model_class.human_attribute_name(:category) + ':'
+  %br
+  = @action_program.category
+%p
+  %strong= model_class.human_attribute_name(:description) + ':'
+  %br
+  = @action_program.description
+%p
+  %strong= model_class.human_attribute_name(:state) + ':'
+  %br
+  = @action_program.state
+%p
+  %strong= model_class.human_attribute_name(:type) + ':'
+  %br
+  = @action_program.type
+%p
+  %strong= model_class.human_attribute_name(:therapy_id) + ':'
+  %br
+  = @action_program.therapy_id
+%p
+  %strong= model_class.human_attribute_name(:condition_id) + ':'
+  %br
+  = @action_program.condition_id
+
+.form-actions
+  = link_to t('.back', :default => t("helpers.links.back")), action_programs_path, :class => 'btn'
+  = link_to t('.edit', :default => t("helpers.links.edit")), edit_action_program_path(@action_program), :class => 'btn'
+  = link_to t('.destroy', :default => t("helpers.links.destroy")), action_program_path(@action_program), :method => "delete", :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')), :class => 'btn btn-danger'

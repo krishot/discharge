@@ -1,0 +1,51 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  budgeted_cost: 9.99
+  actual_cost: 9.99
+  expected_revenue: 9.99
+  number_sent: 9.99
+  expected_response: 9.99
+  parent_id: MyString
+  campaign_type: MyString
+  status: MyString
+  state: MyString
+  type: 
+  buying_stage: MyString
+  child_grouper: MyString
+  substantial_engagement: MyString
+  important_action: MyString
+  list_only: MyString
+  started_on: 2012-10-06
+  ended_on: 2012-10-06
+  target_url: MyString
+  source_url: MyString
+  cookie_name: MyString
+  campaign_id: MyString
+  acts: 
+
+two:
+  name: MyString
+  budgeted_cost: 9.99
+  actual_cost: 9.99
+  expected_revenue: 9.99
+  number_sent: 9.99
+  expected_response: 9.99
+  parent_id: MyString
+  campaign_type: MyString
+  status: MyString
+  state: MyString
+  type: 
+  buying_stage: MyString
+  child_grouper: MyString
+  substantial_engagement: MyString
+  important_action: MyString
+  list_only: MyString
+  started_on: 2012-10-06
+  ended_on: 2012-10-06
+  target_url: MyString
+  source_url: MyString
+  cookie_name: MyString
+  campaign_id: MyString
+  acts: 

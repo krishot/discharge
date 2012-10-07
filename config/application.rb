@@ -34,7 +34,8 @@ module Discharge
     # config.i18n.default_locale = :de
 
     # Configure the default encoding used in templates for Ruby 1.9.
-    config.encoding = "utf-8"
+    config.encoding = "utf-8"               
+    config.time_zone = 'UTC'   
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
@@ -42,7 +43,14 @@ module Discharge
     # Use SQL instead of Active Record's schema dumper when creating the database.
     # This is necessary if your schema can't be completely dumped by the schema dumper,
     # like if you have constraints or database-specific column types
-    # config.active_record.schema_format = :sql
+    # config.active_record.schema_format = :sql       
+    config.generators do |g|
+      g.orm             :active_record  
+      g.template_engine :haml
+      g.test_framework  :rspec, :fixture => false, :views => false
+      g.helpers         false      
+      #g.form_builder :twitter_bootstrap_form_for      
+    end
 
     # Enforce whitelist mode for mass assignment.
     # This will create an empty whitelist of attributes available for mass-assignment for all models
@@ -51,7 +59,8 @@ module Discharge
     # config.active_record.whitelist_attributes = true
 
     # Enable the asset pipeline
-    config.assets.enabled = true
+    config.assets.enabled = true      
+    config.assets.logger = false      
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'

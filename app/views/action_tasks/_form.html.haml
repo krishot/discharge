@@ -1,0 +1,32 @@
+= form_for @action_task, :html => { :class => 'form-horizontal' } do |f|
+  .control-group
+    = f.label :name, :class => 'control-label'
+    .controls
+      = f.text_field :name, :class => 'text_field'
+  .control-group
+    = f.label :description, :class => 'control-label'
+    .controls
+      = f.text_area :description, :class => 'text_area'
+  .control-group
+    = f.label :url, :class => 'control-label'
+    .controls
+      = f.text_field :url, :class => 'text_field'
+  .control-group
+    = f.label :state, :class => 'control-label'
+    .controls
+      = f.text_field :state, :class => 'text_field'
+  .control-group
+    = f.label :type, :class => 'control-label'
+    .controls
+      = f.text_field :type, :class => 'text_field'
+  .control-group
+    = f.label :category, :class => 'control-label'
+    .controls
+      = f.text_field :category, :class => 'text_field'
+  .control-group
+    = f.label :action_program_id, :class => 'control-label'
+    .controls
+      = f.number_field :action_program_id, :class => 'number_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), action_tasks_path, :class => 'btn'

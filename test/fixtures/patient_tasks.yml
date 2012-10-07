@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  state: MyString
+  action_task: 
+  patient: 
+
+two:
+  name: MyString
+  state: MyString
+  action_task: 
+  patient: 

@@ -1,0 +1,60 @@
+= form_for @patient, :html => { :class => 'form-horizontal' } do |f|
+  .control-group
+    = f.label :first_name, :class => 'control-label'
+    .controls
+      = f.text_field :first_name, :class => 'text_field'
+  .control-group
+    = f.label :last_name, :class => 'control-label'
+    .controls
+      = f.text_field :last_name, :class => 'text_field'
+  .control-group
+    = f.label :email, :class => 'control-label'
+    .controls
+      = f.text_field :email, :class => 'text_field'
+  .control-group
+    = f.label :phone, :class => 'control-label'
+    .controls
+      = f.text_field :phone, :class => 'text_field'
+  .control-group
+    = f.label :description, :class => 'control-label'
+    .controls
+      = f.text_area :description, :class => 'text_area'
+  .control-group
+    = f.label :state, :class => 'control-label'
+    .controls
+      = f.text_field :state, :class => 'text_field'
+  .control-group
+    = f.label :engaged_at, :class => 'control-label'
+    .controls
+      = f.datetime_select :engaged_at, :class => 'datetime_select'
+  .control-group
+    = f.label :last_contact, :class => 'control-label'
+    .controls
+      = f.datetime_select :last_contact, :class => 'datetime_select'
+  .control-group
+    = f.label :carepass_id, :class => 'control-label'
+    .controls
+      = f.text_field :carepass_id, :class => 'text_field'
+  .control-group
+    = f.label :mhealth_id, :class => 'control-label'
+    .controls
+      = f.text_field :mhealth_id, :class => 'text_field'
+  .control-group
+    = f.label :physician_id, :class => 'control-label'
+    .controls
+      = f.number_field :physician_id, :class => 'number_field'
+  .control-group
+    = f.label :conditions_id, :class => 'control-label'
+    .controls
+      = f.number_field :conditions_id, :class => 'number_field'
+  .control-group
+    = f.label :actions_id, :class => 'control-label'
+    .controls
+      = f.number_field :actions_id, :class => 'number_field'
+  .control-group
+    = f.label :alerts_id, :class => 'control-label'
+    .controls
+      = f.number_field :alerts_id, :class => 'number_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), patients_path, :class => 'btn'
