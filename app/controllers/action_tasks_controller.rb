@@ -13,7 +13,8 @@ class ActionTasksController < ApplicationController
   # GET /action_tasks/1
   # GET /action_tasks/1.json
   def show
-    @action_task = ActionTask.find(params[:id])
+    @action_task = ActionTask.find(params[:id])  
+    @action_program = ActionProgram.find(params[:action_program_id]) if params[:action_program_id]
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,8 +25,12 @@ class ActionTasksController < ApplicationController
   # GET /action_tasks/new
   # GET /action_tasks/new.json
   def new
-    @action_task = ActionTask.new
-
+    @action_task = ActionTask.new                       
+    if params[:action_program_id]
+      @action_program = ActionProgram.find(params[:action_program_id])        
+      @action_task.action_program = @action_program
+    end  
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @action_task }
@@ -44,13 +49,15 @@ class ActionTasksController < ApplicationController
 
     respond_to do |format|
       if @action_task.save
-        format.html { redirect_to @action_task, notice: 'Action task was successfully created.' }
+        format.html { 
+          redirect_to action_program_path(@action_task.action_program), notice: 'Action task was successfully created.' 
+        }
         format.json { render json: @action_task, status: :created, location: @action_task }
       else
         format.html { render action: "new" }
         format.json { render json: @action_task.errors, status: :unprocessable_entity }
       end
-    end
+    end 
   end
 
   # PUT /action_tasks/1

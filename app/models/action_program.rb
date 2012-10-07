@@ -1,5 +1,6 @@
 class ActionProgram < ActiveRecord::Base
   belongs_to :condition        
+  has_many :action_tasks
   
   def to_s
     self.name
