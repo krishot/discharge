@@ -27,9 +27,22 @@
             %span.icon-bar
           %a.brand(href="#") Discharge
           .container.nav-collapse
-            %ul.nav
-              %li= link_to "Patients", patients_path
-              %li= link_to "Conditions", conditions_path
+            %ul.nav        
+              %li
+                -if @physician
+                  = link_to "#{@physician.name}", physician_path(@physician)  
+                -else
+                  = link_to "Physicians", physicians_path
+              %li
+                -if @patient
+                  = link_to "#{@patient.name}", patient_path(@patient)  
+                -else
+                  = link_to "Patients", patients_path
+              %li
+                -if @condition
+                  = link_to "#{@condition.name}", condition_path(@condition)
+                -else  
+                  = link_to "Conditions", conditions_path
               %li= link_to "Treatment Programs", action_programs_path
 
     .container-fluid

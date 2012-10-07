@@ -1,0 +1,44 @@
+         physicians GET    /physicians(.:format)               physicians#index
+                    POST   /physicians(.:format)               physicians#create
+      new_physician GET    /physicians/new(.:format)           physicians#new
+     edit_physician GET    /physicians/:id/edit(.:format)      physicians#edit
+          physician GET    /physicians/:id(.:format)           physicians#show
+                    PUT    /physicians/:id(.:format)           physicians#update
+                    DELETE /physicians/:id(.:format)           physicians#destroy
+         conditions GET    /conditions(.:format)               conditions#index
+                    POST   /conditions(.:format)               conditions#create
+      new_condition GET    /conditions/new(.:format)           conditions#new
+     edit_condition GET    /conditions/:id/edit(.:format)      conditions#edit
+          condition GET    /conditions/:id(.:format)           conditions#show
+                    PUT    /conditions/:id(.:format)           conditions#update
+                    DELETE /conditions/:id(.:format)           conditions#destroy
+    action_programs GET    /action_programs(.:format)          action_programs#index
+                    POST   /action_programs(.:format)          action_programs#create
+ new_action_program GET    /action_programs/new(.:format)      action_programs#new
+edit_action_program GET    /action_programs/:id/edit(.:format) action_programs#edit
+     action_program GET    /action_programs/:id(.:format)      action_programs#show
+                    PUT    /action_programs/:id(.:format)      action_programs#update
+                    DELETE /action_programs/:id(.:format)      action_programs#destroy
+       action_tasks GET    /action_tasks(.:format)             action_tasks#index
+                    POST   /action_tasks(.:format)             action_tasks#create
+    new_action_task GET    /action_tasks/new(.:format)         action_tasks#new
+   edit_action_task GET    /action_tasks/:id/edit(.:format)    action_tasks#edit
+        action_task GET    /action_tasks/:id(.:format)         action_tasks#show
+                    PUT    /action_tasks/:id(.:format)         action_tasks#update
+                    DELETE /action_tasks/:id(.:format)         action_tasks#destroy
+           patients GET    /patients(.:format)                 patients#index
+                    POST   /patients(.:format)                 patients#create
+        new_patient GET    /patients/new(.:format)             patients#new
+       edit_patient GET    /patients/:id/edit(.:format)        patients#edit
+            patient GET    /patients/:id(.:format)             patients#show
+                    PUT    /patients/:id(.:format)             patients#update
+                    DELETE /patients/:id(.:format)             patients#destroy
+      patient_tasks GET    /patient_tasks(.:format)            patient_tasks#index
+                    POST   /patient_tasks(.:format)            patient_tasks#create
+   new_patient_task GET    /patient_tasks/new(.:format)        patient_tasks#new
+  edit_patient_task GET    /patient_tasks/:id/edit(.:format)   patient_tasks#edit
+       patient_task GET    /patient_tasks/:id(.:format)        patient_tasks#show
+                    PUT    /patient_tasks/:id(.:format)        patient_tasks#update
+                    DELETE /patient_tasks/:id(.:format)        patient_tasks#destroy
+                           /                                   home#index
+               root        /                                   home#index

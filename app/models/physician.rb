@@ -1,3 +1,8 @@
 class Physician < ActiveRecord::Base
-  belongs_to :patients
+  has_many :patients             
+  
+  def name
+    "#{self.first_name} #{self.last_name}"  
+  end
+  
 end
