@@ -10,7 +10,25 @@
   .control-group
     = f.label :url, :class => 'control-label'
     .controls
-      = f.text_area :url, :class => 'text_area'
+      = f.text_field :url, :class => 'text_field'
+  .control-group
+    = f.label :category, :class => 'control-label'
+    .controls
+      = f.select :category, ["Acute","Chronic"], :class => 'select'
+  .control-group
+    = f.label :icd9, :class => 'control-label'
+    .controls
+      = f.text_field :icd9, :class => 'text_field'
+
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), conditions_path, :class => 'btn'
+
+-if params[:detail]   
+  .control-group
+    = f.label :icd9, :class => 'control-label'
+    .controls
+      = f.text_field :icd9, :class => 'text_field'
   .control-group
     = f.label :state, :class => 'control-label'
     .controls
@@ -19,22 +37,5 @@
     = f.label :type, :class => 'control-label'
     .controls
       = f.text_field :type, :class => 'text_field'
-  .control-group
-    = f.label :category, :class => 'control-label'
-    .controls
-      = f.text_field :category, :class => 'text_field'
-  .control-group
-    = f.label :icd9, :class => 'control-label'
-    .controls
-      = f.text_field :icd9, :class => 'text_field'
-  .control-group
-    = f.label :action_program_id, :class => 'control-label'
-    .controls
-      = f.number_field :action_program_id, :class => 'number_field'
-  .control-group
-    = f.label :offers_id, :class => 'control-label'
-    .controls
-      = f.number_field :offers_id, :class => 'number_field'
-  .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
-    = link_to t('.cancel', :default => t("helpers.links.cancel")), conditions_path, :class => 'btn'
+
+  

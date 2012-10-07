@@ -41,36 +41,6 @@ ActiveRecord::Schema.define(:version => 20121007035521) do
 
   add_index "action_tasks", ["action_program_id"], :name => "index_action_tasks_on_action_program_id"
 
-  create_table "campaigns", :force => true do |t|
-    t.string   "name"
-    t.decimal  "budgeted_cost",          :precision => 10, :scale => 0
-    t.decimal  "actual_cost",            :precision => 10, :scale => 0
-    t.decimal  "expected_revenue",       :precision => 10, :scale => 0
-    t.decimal  "number_sent",            :precision => 10, :scale => 0
-    t.decimal  "expected_response",      :precision => 10, :scale => 0
-    t.string   "parent_id"
-    t.string   "campaign_type"
-    t.string   "status"
-    t.string   "state"
-    t.string   "type"
-    t.string   "buying_stage"
-    t.string   "child_grouper"
-    t.string   "substantial_engagement"
-    t.string   "important_action"
-    t.string   "list_only"
-    t.date     "started_on"
-    t.date     "ended_on"
-    t.string   "target_url"
-    t.string   "source_url"
-    t.string   "cookie_name"
-    t.string   "campaign_id"
-    t.integer  "acts_id"
-    t.datetime "created_at",                                            :null => false
-    t.datetime "updated_at",                                            :null => false
-  end
-
-  add_index "campaigns", ["acts_id"], :name => "index_campaigns_on_acts_id"
-
   create_table "conditions", :force => true do |t|
     t.string   "name"
     t.text     "description"
@@ -131,7 +101,6 @@ ActiveRecord::Schema.define(:version => 20121007035521) do
     t.string   "phone"
     t.text     "specialty"
     t.string   "state"
-    t.integer  "patients_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

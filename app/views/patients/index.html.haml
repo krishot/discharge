@@ -4,42 +4,20 @@
 %table.table.table-striped
   %thead
     %tr
-      %th= model_class.human_attribute_name(:id)
-      %th= model_class.human_attribute_name(:first_name)
+      %th= "Name"
       %th= model_class.human_attribute_name(:last_name)
       %th= model_class.human_attribute_name(:email)
       %th= model_class.human_attribute_name(:phone)
-      %th= model_class.human_attribute_name(:description)
-      %th= model_class.human_attribute_name(:state)
-      %th= model_class.human_attribute_name(:engaged_at)
-      %th= model_class.human_attribute_name(:last_contact)
-      %th= model_class.human_attribute_name(:carepass_id)
-      %th= model_class.human_attribute_name(:mhealth_id)
-      %th= model_class.human_attribute_name(:physician_id)
-      %th= model_class.human_attribute_name(:conditions_id)
-      %th= model_class.human_attribute_name(:actions_id)
-      %th= model_class.human_attribute_name(:alerts_id)
-      %th= model_class.human_attribute_name(:created_at)
       %th=t '.actions', :default => t("helpers.actions")
   %tbody
     - @patients.each do |patient|
       %tr
-        %td= link_to patient.id, patient_path(patient)
-        %td= patient.first_name
-        %td= patient.last_name
+        %td= link_to patient.name, patient_path(patient)
         %td= patient.email
         %td= patient.phone
-        %td= patient.description
-        %td= patient.state
-        %td= patient.engaged_at
-        %td= patient.last_contact
-        %td= patient.carepass_id
-        %td= patient.mhealth_id
-        %td= patient.physician_id
-        %td= patient.conditions_id
-        %td= patient.actions_id
-        %td= patient.alerts_id
-        %td=l patient.created_at
+        %td
+          -patient.conditions.each do |condition|
+            = link_to condition, conditions_path(condition)
         %td
           = link_to t('.edit', :default => t("helpers.links.edit")), edit_patient_path(patient), :class => 'btn btn-mini'
           = link_to t('.destroy', :default => t("helpers.links.destroy")), patient_path(patient), :method => :delete, :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')), :class => 'btn btn-mini btn-danger'

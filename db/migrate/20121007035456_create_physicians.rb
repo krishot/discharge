@@ -7,10 +7,8 @@ class CreatePhysicians < ActiveRecord::Migration
       t.string :phone
       t.text :specialty
       t.string :state
-      t.references :patients
 
       t.timestamps
     end
-    add_index :physicians, :patients_id
   end
 end

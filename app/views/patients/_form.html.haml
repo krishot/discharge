@@ -1,10 +1,9 @@
 = form_for @patient, :html => { :class => 'form-horizontal' } do |f|
   .control-group
-    = f.label :first_name, :class => 'control-label'
+    = f.label "Name", :class => 'control-label'
     .controls
       = f.text_field :first_name, :class => 'text_field'
   .control-group
-    = f.label :last_name, :class => 'control-label'
     .controls
       = f.text_field :last_name, :class => 'text_field'
   .control-group
@@ -15,6 +14,22 @@
     = f.label :phone, :class => 'control-label'
     .controls
       = f.text_field :phone, :class => 'text_field'
+  
+
+  .control-group
+    = f.label :physician_id, :class => 'control-label'
+    .controls
+      = f.select :physician_id, Physician.all.collect { |t| [t.name, t.id]}, :prompt => "Choose Physician", :class => 'select'
+  .control-group
+    = f.label :conditions_id, :class => 'control-label'
+    .controls
+      = f.select :conditions_id, Condition.all.collect { |t| [t.name, t.id]}, :prompt => "Choose Condition", :class => 'select'
+
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), patients_path, :class => 'btn'
+
+-if params[:detail]     
   .control-group
     = f.label :description, :class => 'control-label'
     .controls
@@ -39,22 +54,3 @@
     = f.label :mhealth_id, :class => 'control-label'
     .controls
       = f.text_field :mhealth_id, :class => 'text_field'
-  .control-group
-    = f.label :physician_id, :class => 'control-label'
-    .controls
-      = f.number_field :physician_id, :class => 'number_field'
-  .control-group
-    = f.label :conditions_id, :class => 'control-label'
-    .controls
-      = f.number_field :conditions_id, :class => 'number_field'
-  .control-group
-    = f.label :actions_id, :class => 'control-label'
-    .controls
-      = f.number_field :actions_id, :class => 'number_field'
-  .control-group
-    = f.label :alerts_id, :class => 'control-label'
-    .controls
-      = f.number_field :alerts_id, :class => 'number_field'
-  .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
-    = link_to t('.cancel', :default => t("helpers.links.cancel")), patients_path, :class => 'btn'

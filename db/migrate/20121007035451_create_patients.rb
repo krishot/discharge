@@ -12,15 +12,10 @@ class CreatePatients < ActiveRecord::Migration
       t.string :carepass_id
       t.string :mhealth_id
       t.references :physician
-      t.references :conditions
-      t.references :actions
-      t.references :alerts
-
+      t.integer :condition_id
       t.timestamps
     end
     add_index :patients, :physician_id
-    add_index :patients, :conditions_id
-    add_index :patients, :actions_id
-    add_index :patients, :alerts_id
+    add_index :patients, :condition_id
   end
 end

@@ -9,11 +9,9 @@ class CreateConditions < ActiveRecord::Migration
       t.string :category
       t.string :icd9
       t.references :action_program
-      t.references :offers
-
+ 
       t.timestamps
     end
     add_index :conditions, :action_program_id
-    add_index :conditions, :offers_id
   end
 end
