@@ -17,7 +17,7 @@
       = f.text_field :phone, :class => 'text_field'
   
   -if @patient.physician_id
-    = f.hidden_field :physician_id, :value=>@physician.id 
+    = f.hidden_field :physician_id, :value=>@patient.physician.id 
   -else
     .control-group
       = f.label :physician_id, :class => 'control-label'
