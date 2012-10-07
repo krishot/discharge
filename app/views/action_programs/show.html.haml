@@ -2,7 +2,8 @@
 .page-header
   %h1                            
     = link_to t('.list', :default => t("helpers.links.list")), action_programs_path, :class => 'btn'     
-    = "#{@action_program.name} for #{@action_program.condition}"                                                                         
+    = "#{@action_program.name} for "   
+    =link_to @action_program.condition, condition_path(@action_program.condition)                                                                      
     = link_to t('.edit', :default => t("helpers.links.edit")), edit_action_program_path(@action_program), :class => 'btn' 
 
 %p
