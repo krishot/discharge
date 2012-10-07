@@ -14,6 +14,7 @@ class ActionProgramsController < ApplicationController
   # GET /action_programs/1.json
   def show
     @action_program = ActionProgram.find(params[:id])
+    @condition = Condition.find(params[:condition_id]) if params[:condition_id]     
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +25,11 @@ class ActionProgramsController < ApplicationController
   # GET /action_programs/new
   # GET /action_programs/new.json
   def new
-    @action_program = ActionProgram.new
+    @action_program = ActionProgram.new  
+    if params[:condition_id]           
+      @condition = Condition.find(params[:condition_id])  
+      @action_program.condition = @condition
+    end
 
     respond_to do |format|
       format.html # new.html.erb

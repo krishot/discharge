@@ -7,28 +7,28 @@ Discharge::Application.routes.draw do
   resources :patients 
   resources :patient_tasks
 
-#  resources :physicians do
-#    #resources :patients  
-#  end
-#   
-#  resources :conditions do
-#    collection do
-#      get :sync 
-#    end
-#    resources :action_programs 
-#  end
-#  
-#  resources :action_programs do
-#    resources :action_tasks
-#  end
+  resources :physicians do
+    resources :patients  
+  end
+   
+  resources :conditions do
+    collection do
+      get :sync 
+    end
+    resources :action_programs 
+  end
   
-# resources :patients  do
-#   resources :conditions do
-#     resources :action_programs do
-#       resources :action_tasks 
-#     end
-#   end
-# end
+  resources :action_programs do
+    resources :action_tasks
+  end
+ 
+ resources :patients  do
+   resources :conditions do
+     resources :action_programs do
+       resources :action_tasks 
+     end
+   end
+ end
   
 
   match "/" => 'home#index' 

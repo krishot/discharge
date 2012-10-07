@@ -29,17 +29,17 @@
           .container.nav-collapse
             %ul.nav        
               %li
-                -if @physician
+                -if @physician && @physician.id
                   = link_to "#{@physician.name}", physician_path(@physician)  
                 -else
                   = link_to "Physicians", physicians_path
               %li
-                -if @patient
+                -if @patient && @patient.id 
                   = link_to "#{@patient.name}", patient_path(@patient)  
                 -else
                   = link_to "Patients", patients_path
               %li
-                -if @condition
+                -if @condition && @condition.id 
                   = link_to "#{@condition.name}", condition_path(@condition)
                 -else  
                   = link_to "Conditions", conditions_path

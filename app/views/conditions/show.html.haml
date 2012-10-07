@@ -1,45 +1,23 @@
 - model_class = Condition
 .page-header
-  %h1=t '.title', :default => model_class.model_name.human
+  %h1              
+    = link_to t('.back', :default => t("helpers.links.back")), conditions_path, :class => 'btn'  
+    = @condition.name   
+    = link_to t('.edit', :default => t("helpers.links.edit")), edit_condition_path(@condition), :class => 'btn' 
 
 %p
-  %strong= model_class.human_attribute_name(:name) + ':'
-  %br
-  = @condition.name
-%p
+  %strong= model_class.human_attribute_name(:category) + ':'
+  = @condition.category
   %strong= model_class.human_attribute_name(:description) + ':'
   %br
   = @condition.description
-%p
-  %strong= model_class.human_attribute_name(:url) + ':'
-  %br
-  = @condition.url
-%p
-  %strong= model_class.human_attribute_name(:state) + ':'
-  %br
-  = @condition.state
-%p
-  %strong= model_class.human_attribute_name(:type) + ':'
-  %br
-  = @condition.type
-%p
-  %strong= model_class.human_attribute_name(:category) + ':'
-  %br
-  = @condition.category
-%p
-  %strong= model_class.human_attribute_name(:icd9) + ':'
-  %br
-  = @condition.icd9
-%p
-  %strong= model_class.human_attribute_name(:action_program_id) + ':'
-  %br
-  = @condition.action_program_id
-%p
-  %strong= model_class.human_attribute_name(:offers_id) + ':'
-  %br
-  = @condition.offers_id
+  = link_to "More Info", @condition.url, :target=>"_new"
 
-.form-actions
-  = link_to t('.back', :default => t("helpers.links.back")), conditions_path, :class => 'btn'
-  = link_to t('.edit', :default => t("helpers.links.edit")), edit_condition_path(@condition), :class => 'btn'
-  = link_to t('.destroy', :default => t("helpers.links.destroy")), condition_path(@condition), :method => "delete", :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')), :class => 'btn btn-danger'
+%p
+  %h2
+    = "Programs"
+    = link_to t('.new', :default => t("helpers.links.new")), new_condition_action_program_path(@condition), :class => 'btn btn-primary'
+    
+  %br
+  =render :partial => "action_programs/listing", :locals=>{:action_programs=>@condition.action_programs, :model_class=>ActionProgram }  
+  

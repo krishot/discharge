@@ -1,6 +1,11 @@
 class Condition < ActiveRecord::Base
-  has_many :action_program
-  has_many :patients
+  has_many :action_programs
+  has_many :patients                                         
+  
+  def to_s
+    self.name
+  end
+  
 end
 
 # create_table "conditions", :force => true do |t|

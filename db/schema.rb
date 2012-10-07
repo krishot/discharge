@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121007035521) do
+ActiveRecord::Schema.define(:version => 20121007035517) do
 
   create_table "action_programs", :force => true do |t|
     t.string   "name"
@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(:version => 20121007035521) do
     t.text     "description"
     t.string   "state"
     t.string   "type"
-    t.string   "therapy_id"
     t.integer  "condition_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
@@ -44,19 +43,17 @@ ActiveRecord::Schema.define(:version => 20121007035521) do
   create_table "conditions", :force => true do |t|
     t.string   "name"
     t.text     "description"
-    t.text     "url"
+    t.string   "url"
     t.string   "state"
     t.string   "type"
     t.string   "category"
     t.string   "icd9"
     t.integer  "action_program_id"
-    t.integer  "offers_id"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
   end
 
   add_index "conditions", ["action_program_id"], :name => "index_conditions_on_action_program_id"
-  add_index "conditions", ["offers_id"], :name => "index_conditions_on_offers_id"
 
   create_table "patient_tasks", :force => true do |t|
     t.string   "name"
@@ -82,16 +79,12 @@ ActiveRecord::Schema.define(:version => 20121007035521) do
     t.string   "carepass_id"
     t.string   "mhealth_id"
     t.integer  "physician_id"
-    t.integer  "conditions_id"
-    t.integer  "actions_id"
-    t.integer  "alerts_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.integer  "condition_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
-  add_index "patients", ["actions_id"], :name => "index_patients_on_actions_id"
-  add_index "patients", ["alerts_id"], :name => "index_patients_on_alerts_id"
-  add_index "patients", ["conditions_id"], :name => "index_patients_on_conditions_id"
+  add_index "patients", ["condition_id"], :name => "index_patients_on_condition_id"
   add_index "patients", ["physician_id"], :name => "index_patients_on_physician_id"
 
   create_table "physicians", :force => true do |t|
@@ -101,9 +94,8 @@ ActiveRecord::Schema.define(:version => 20121007035521) do
     t.string   "phone"
     t.text     "specialty"
     t.string   "state"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
-
 
 end

@@ -1,6 +1,8 @@
 class PatientsController < ApplicationController
   # GET /patients
-  # GET /patients.json
+  # GET /patients.json   
+  
+  
   def index
     @patients = Patient.all
 
@@ -14,7 +16,8 @@ class PatientsController < ApplicationController
   # GET /patients/1.json
   def show
     @patient = Patient.find(params[:id])
-
+    @physician = Physician.find(params[:physician_id]) if params[:physician_id]     
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @patient }
@@ -24,8 +27,10 @@ class PatientsController < ApplicationController
   # GET /patients/new
   # GET /patients/new.json
   def new
-    @patient = Patient.new
-
+    @patient = Patient.new                   
+    @physician = Physician.find(params[:physician_id]) if params[:physician_id] 
+    @patient.physician = @physician if @physician 
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @patient }

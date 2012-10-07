@@ -1,4 +1,7 @@
 - model_class = ActionProgram
 .page-header
-  %h1=t '.title', :default => t('helpers.titles.new', :model => model_class.model_name.human, :default => "New #{model_class.model_name.human}")
+  %h1
+    =t '.title', :default => t('helpers.titles.new', :model => model_class.model_name.human, :default => "New #{model_class.model_name.human}")                                                            
+    -if @action_program.condition
+      = "For #{@action_program.condition}"
 = render :partial => "form"

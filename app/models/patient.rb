@@ -7,6 +7,10 @@ class Patient < ActiveRecord::Base
   def name
     "#{self.first_name} #{self.last_name}"  
   end
+  def to_s
+    self.name
+  end
+  
 end
 
 # create_table "patients", :force => true do |t|

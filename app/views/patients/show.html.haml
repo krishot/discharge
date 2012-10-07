@@ -1,65 +1,57 @@
 - model_class = Patient
 .page-header
-  %h1=t '.title', :default => model_class.model_name.human
+  %h1 
+    = link_to t('.back', :default => t("helpers.links.back")), patients_path, :class => 'btn'
+    
+    = @patient.name
+    = link_to t('.edit', :default => t("helpers.links.edit")), edit_patient_path(@patient), :class => 'btn' 
+
 
 %p
-  %strong= model_class.human_attribute_name(:first_name) + ':'
-  %br
-  = @patient.first_name
-%p
-  %strong= model_class.human_attribute_name(:last_name) + ':'
-  %br
-  = @patient.last_name
-%p
-  %strong= model_class.human_attribute_name(:email) + ':'
-  %br
+  %strong Contact
   = @patient.email
-%p
-  %strong= model_class.human_attribute_name(:phone) + ':'
-  %br
   = @patient.phone
 %p
-  %strong= model_class.human_attribute_name(:description) + ':'
-  %br
-  = @patient.description
-%p
-  %strong= model_class.human_attribute_name(:state) + ':'
-  %br
-  = @patient.state
-%p
-  %strong= model_class.human_attribute_name(:engaged_at) + ':'
-  %br
-  = @patient.engaged_at
-%p
-  %strong= model_class.human_attribute_name(:last_contact) + ':'
-  %br
-  = @patient.last_contact
-%p
-  %strong= model_class.human_attribute_name(:carepass_id) + ':'
-  %br
-  = @patient.carepass_id
-%p
-  %strong= model_class.human_attribute_name(:mhealth_id) + ':'
-  %br
-  = @patient.mhealth_id
-%p
   %strong= model_class.human_attribute_name(:physician_id) + ':'
-  %br
-  = @patient.physician_id
+  = @patient.physician
 %p
-  %strong= model_class.human_attribute_name(:conditions_id) + ':'
-  %br
-  = @patient.conditions_id
+  %h2
+    = "Condition" + ':'
+    = @patient.condition
 %p
-  %strong= model_class.human_attribute_name(:actions_id) + ':'
-  %br
-  = @patient.actions_id
-%p
-  %strong= model_class.human_attribute_name(:alerts_id) + ':'
-  %br
-  = @patient.alerts_id
+  %strong Action Programs
+  -@patient.condition.action_programs.each do |action_program|
+    = link_to action_programs, action_program_path(action_programs)
 
 .form-actions
-  = link_to t('.back', :default => t("helpers.links.back")), patients_path, :class => 'btn'
-  = link_to t('.edit', :default => t("helpers.links.edit")), edit_patient_path(@patient), :class => 'btn'
-  = link_to t('.destroy', :default => t("helpers.links.destroy")), patient_path(@patient), :method => "delete", :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')), :class => 'btn btn-danger'
+  
+
+-if params[:detail]
+  %p
+    %strong= model_class.human_attribute_name(:state) + ':'
+    %br
+    = @patient.state
+  %p
+    %strong= model_class.human_attribute_name(:engaged_at) + ':'
+    %br
+    = @patient.engaged_at
+  %p
+    %strong= model_class.human_attribute_name(:last_contact) + ':'
+    %br
+    = @patient.last_contact
+  %p
+    %strong= model_class.human_attribute_name(:carepass_id) + ':'
+    %br
+    = @patient.carepass_id
+  %p
+    %strong= model_class.human_attribute_name(:mhealth_id) + ':'
+    %br
+    = @patient.mhealth_id
+  %p
+    %strong= model_class.human_attribute_name(:actions_id) + ':'
+    %br
+    = @patient.actions_id
+    %p
+      %strong= model_class.human_attribute_name(:description) + ':'
+      %br
+      = @patient.description 

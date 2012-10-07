@@ -11,7 +11,7 @@ class CreatePatients < ActiveRecord::Migration
       t.datetime :last_contact
       t.string :carepass_id
       t.string :mhealth_id
-      t.references :physician
+      t.integer :physician_id  
       t.integer :condition_id
       t.timestamps
     end

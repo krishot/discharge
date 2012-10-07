@@ -6,7 +6,6 @@ class CreateActionPrograms < ActiveRecord::Migration
       t.text :description
       t.string :state
       t.string :type
-      t.string :therapy_id
       t.references :condition
 
       t.timestamps

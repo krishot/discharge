@@ -1,6 +1,11 @@
 class PatientTask < ActiveRecord::Base
-  has_many :action_tasks
-  has_many :patients
+  belongs_to :action_task
+  belongs_to :patient
+  
+  def to_s
+    self.name
+  end
+  
 end
 
 #create_table "patient_tasks", :force => true do |t|
