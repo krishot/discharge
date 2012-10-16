@@ -14,5 +14,5 @@ you can check out a working version at the url below.  I will pull this down if 
 ![Screenshot of tasks tab][docsays_tasks]
 ![Screenshot of medications tab][docsays_meds]
   
-[docsays_tasks]: /app/assets/images/docsays_tasks.png 
-[docsays_meds]: /app/assets/images/docsays_meds.png  
+[docsays_tasks]: https://github.com/chipski/discharge/blob/master/app/assets/images/docsays_task_iphone.png 
+[docsays_meds]: blob/master/app/assets/images/docsays_meds_iphone.png 
