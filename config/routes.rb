@@ -2,7 +2,6 @@ Discharge::Application.routes.draw do
   
   resources :physicians 
   resources :conditions
-  resources :action_programs 
   resources :action_tasks
   resources :patients 
   resources :patient_tasks
@@ -24,9 +23,7 @@ Discharge::Application.routes.draw do
  
  resources :patients  do
    resources :conditions do
-     resources :action_programs do
-       resources :action_tasks 
-     end
+     #resources :action_programs 
    end
  end
   

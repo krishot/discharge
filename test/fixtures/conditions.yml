@@ -8,8 +8,7 @@ one:
   type: 
   category: MyString
   icd9: MyString
-  action_program: 
-  offers: 
+  
 
 two:
   name: MyString
@@ -19,5 +18,3 @@ two:
   type: 
   category: MyString
   icd9: MyString
-  action_program: 
-  offers: 

@@ -1,115 +1,101 @@
-                                       physicians GET    /physicians(.:format)                                                                                             physicians#index
-                                                  POST   /physicians(.:format)                                                                                             physicians#create
-                                    new_physician GET    /physicians/new(.:format)                                                                                         physicians#new
-                                   edit_physician GET    /physicians/:id/edit(.:format)                                                                                    physicians#edit
-                                        physician GET    /physicians/:id(.:format)                                                                                         physicians#show
-                                                  PUT    /physicians/:id(.:format)                                                                                         physicians#update
-                                                  DELETE /physicians/:id(.:format)                                                                                         physicians#destroy
-                                       conditions GET    /conditions(.:format)                                                                                             conditions#index
-                                                  POST   /conditions(.:format)                                                                                             conditions#create
-                                    new_condition GET    /conditions/new(.:format)                                                                                         conditions#new
-                                   edit_condition GET    /conditions/:id/edit(.:format)                                                                                    conditions#edit
-                                        condition GET    /conditions/:id(.:format)                                                                                         conditions#show
-                                                  PUT    /conditions/:id(.:format)                                                                                         conditions#update
-                                                  DELETE /conditions/:id(.:format)                                                                                         conditions#destroy
-                                  action_programs GET    /action_programs(.:format)                                                                                        action_programs#index
-                                                  POST   /action_programs(.:format)                                                                                        action_programs#create
-                               new_action_program GET    /action_programs/new(.:format)                                                                                    action_programs#new
-                              edit_action_program GET    /action_programs/:id/edit(.:format)                                                                               action_programs#edit
-                                   action_program GET    /action_programs/:id(.:format)                                                                                    action_programs#show
-                                                  PUT    /action_programs/:id(.:format)                                                                                    action_programs#update
-                                                  DELETE /action_programs/:id(.:format)                                                                                    action_programs#destroy
-                                     action_tasks GET    /action_tasks(.:format)                                                                                           action_tasks#index
-                                                  POST   /action_tasks(.:format)                                                                                           action_tasks#create
-                                  new_action_task GET    /action_tasks/new(.:format)                                                                                       action_tasks#new
-                                 edit_action_task GET    /action_tasks/:id/edit(.:format)                                                                                  action_tasks#edit
-                                      action_task GET    /action_tasks/:id(.:format)                                                                                       action_tasks#show
-                                                  PUT    /action_tasks/:id(.:format)                                                                                       action_tasks#update
-                                                  DELETE /action_tasks/:id(.:format)                                                                                       action_tasks#destroy
-                                         patients GET    /patients(.:format)                                                                                               patients#index
-                                                  POST   /patients(.:format)                                                                                               patients#create
-                                      new_patient GET    /patients/new(.:format)                                                                                           patients#new
-                                     edit_patient GET    /patients/:id/edit(.:format)                                                                                      patients#edit
-                                          patient GET    /patients/:id(.:format)                                                                                           patients#show
-                                                  PUT    /patients/:id(.:format)                                                                                           patients#update
-                                                  DELETE /patients/:id(.:format)                                                                                           patients#destroy
-                                    patient_tasks GET    /patient_tasks(.:format)                                                                                          patient_tasks#index
-                                                  POST   /patient_tasks(.:format)                                                                                          patient_tasks#create
-                                 new_patient_task GET    /patient_tasks/new(.:format)                                                                                      patient_tasks#new
-                                edit_patient_task GET    /patient_tasks/:id/edit(.:format)                                                                                 patient_tasks#edit
-                                     patient_task GET    /patient_tasks/:id(.:format)                                                                                      patient_tasks#show
-                                                  PUT    /patient_tasks/:id(.:format)                                                                                      patient_tasks#update
-                                                  DELETE /patient_tasks/:id(.:format)                                                                                      patient_tasks#destroy
-                               physician_patients GET    /physicians/:physician_id/patients(.:format)                                                                      patients#index
-                                                  POST   /physicians/:physician_id/patients(.:format)                                                                      patients#create
-                            new_physician_patient GET    /physicians/:physician_id/patients/new(.:format)                                                                  patients#new
-                           edit_physician_patient GET    /physicians/:physician_id/patients/:id/edit(.:format)                                                             patients#edit
-                                physician_patient GET    /physicians/:physician_id/patients/:id(.:format)                                                                  patients#show
-                                                  PUT    /physicians/:physician_id/patients/:id(.:format)                                                                  patients#update
-                                                  DELETE /physicians/:physician_id/patients/:id(.:format)                                                                  patients#destroy
-                                                  GET    /physicians(.:format)                                                                                             physicians#index
-                                                  POST   /physicians(.:format)                                                                                             physicians#create
-                                                  GET    /physicians/new(.:format)                                                                                         physicians#new
-                                                  GET    /physicians/:id/edit(.:format)                                                                                    physicians#edit
-                                                  GET    /physicians/:id(.:format)                                                                                         physicians#show
-                                                  PUT    /physicians/:id(.:format)                                                                                         physicians#update
-                                                  DELETE /physicians/:id(.:format)                                                                                         physicians#destroy
-                                  sync_conditions GET    /conditions/sync(.:format)                                                                                        conditions#sync
-                        condition_action_programs GET    /conditions/:condition_id/action_programs(.:format)                                                               action_programs#index
-                                                  POST   /conditions/:condition_id/action_programs(.:format)                                                               action_programs#create
-                     new_condition_action_program GET    /conditions/:condition_id/action_programs/new(.:format)                                                           action_programs#new
-                    edit_condition_action_program GET    /conditions/:condition_id/action_programs/:id/edit(.:format)                                                      action_programs#edit
-                         condition_action_program GET    /conditions/:condition_id/action_programs/:id(.:format)                                                           action_programs#show
-                                                  PUT    /conditions/:condition_id/action_programs/:id(.:format)                                                           action_programs#update
-                                                  DELETE /conditions/:condition_id/action_programs/:id(.:format)                                                           action_programs#destroy
-                                                  GET    /conditions(.:format)                                                                                             conditions#index
-                                                  POST   /conditions(.:format)                                                                                             conditions#create
-                                                  GET    /conditions/new(.:format)                                                                                         conditions#new
-                                                  GET    /conditions/:id/edit(.:format)                                                                                    conditions#edit
-                                                  GET    /conditions/:id(.:format)                                                                                         conditions#show
-                                                  PUT    /conditions/:id(.:format)                                                                                         conditions#update
-                                                  DELETE /conditions/:id(.:format)                                                                                         conditions#destroy
-                      action_program_action_tasks GET    /action_programs/:action_program_id/action_tasks(.:format)                                                        action_tasks#index
-                                                  POST   /action_programs/:action_program_id/action_tasks(.:format)                                                        action_tasks#create
-                   new_action_program_action_task GET    /action_programs/:action_program_id/action_tasks/new(.:format)                                                    action_tasks#new
-                  edit_action_program_action_task GET    /action_programs/:action_program_id/action_tasks/:id/edit(.:format)                                               action_tasks#edit
-                       action_program_action_task GET    /action_programs/:action_program_id/action_tasks/:id(.:format)                                                    action_tasks#show
-                                                  PUT    /action_programs/:action_program_id/action_tasks/:id(.:format)                                                    action_tasks#update
-                                                  DELETE /action_programs/:action_program_id/action_tasks/:id(.:format)                                                    action_tasks#destroy
-                                                  GET    /action_programs(.:format)                                                                                        action_programs#index
-                                                  POST   /action_programs(.:format)                                                                                        action_programs#create
-                                                  GET    /action_programs/new(.:format)                                                                                    action_programs#new
-                                                  GET    /action_programs/:id/edit(.:format)                                                                               action_programs#edit
-                                                  GET    /action_programs/:id(.:format)                                                                                    action_programs#show
-                                                  PUT    /action_programs/:id(.:format)                                                                                    action_programs#update
-                                                  DELETE /action_programs/:id(.:format)                                                                                    action_programs#destroy
-    patient_condition_action_program_action_tasks GET    /patients/:patient_id/conditions/:condition_id/action_programs/:action_program_id/action_tasks(.:format)          action_tasks#index
-                                                  POST   /patients/:patient_id/conditions/:condition_id/action_programs/:action_program_id/action_tasks(.:format)          action_tasks#create
- new_patient_condition_action_program_action_task GET    /patients/:patient_id/conditions/:condition_id/action_programs/:action_program_id/action_tasks/new(.:format)      action_tasks#new
-edit_patient_condition_action_program_action_task GET    /patients/:patient_id/conditions/:condition_id/action_programs/:action_program_id/action_tasks/:id/edit(.:format) action_tasks#edit
-     patient_condition_action_program_action_task GET    /patients/:patient_id/conditions/:condition_id/action_programs/:action_program_id/action_tasks/:id(.:format)      action_tasks#show
-                                                  PUT    /patients/:patient_id/conditions/:condition_id/action_programs/:action_program_id/action_tasks/:id(.:format)      action_tasks#update
-                                                  DELETE /patients/:patient_id/conditions/:condition_id/action_programs/:action_program_id/action_tasks/:id(.:format)      action_tasks#destroy
-                patient_condition_action_programs GET    /patients/:patient_id/conditions/:condition_id/action_programs(.:format)                                          action_programs#index
-                                                  POST   /patients/:patient_id/conditions/:condition_id/action_programs(.:format)                                          action_programs#create
-             new_patient_condition_action_program GET    /patients/:patient_id/conditions/:condition_id/action_programs/new(.:format)                                      action_programs#new
-            edit_patient_condition_action_program GET    /patients/:patient_id/conditions/:condition_id/action_programs/:id/edit(.:format)                                 action_programs#edit
-                 patient_condition_action_program GET    /patients/:patient_id/conditions/:condition_id/action_programs/:id(.:format)                                      action_programs#show
-                                                  PUT    /patients/:patient_id/conditions/:condition_id/action_programs/:id(.:format)                                      action_programs#update
-                                                  DELETE /patients/:patient_id/conditions/:condition_id/action_programs/:id(.:format)                                      action_programs#destroy
-                               patient_conditions GET    /patients/:patient_id/conditions(.:format)                                                                        conditions#index
-                                                  POST   /patients/:patient_id/conditions(.:format)                                                                        conditions#create
-                            new_patient_condition GET    /patients/:patient_id/conditions/new(.:format)                                                                    conditions#new
-                           edit_patient_condition GET    /patients/:patient_id/conditions/:id/edit(.:format)                                                               conditions#edit
-                                patient_condition GET    /patients/:patient_id/conditions/:id(.:format)                                                                    conditions#show
-                                                  PUT    /patients/:patient_id/conditions/:id(.:format)                                                                    conditions#update
-                                                  DELETE /patients/:patient_id/conditions/:id(.:format)                                                                    conditions#destroy
-                                                  GET    /patients(.:format)                                                                                               patients#index
-                                                  POST   /patients(.:format)                                                                                               patients#create
-                                                  GET    /patients/new(.:format)                                                                                           patients#new
-                                                  GET    /patients/:id/edit(.:format)                                                                                      patients#edit
-                                                  GET    /patients/:id(.:format)                                                                                           patients#show
-                                                  PUT    /patients/:id(.:format)                                                                                           patients#update
-                                                  DELETE /patients/:id(.:format)                                                                                           patients#destroy
-                                                         /                                                                                                                 home#index
-                                             root        /                                                                                                                 home#index
+                           physicians GET    /physicians(.:format)                                                             physicians#index
+                                      POST   /physicians(.:format)                                                             physicians#create
+                        new_physician GET    /physicians/new(.:format)                                                         physicians#new
+                       edit_physician GET    /physicians/:id/edit(.:format)                                                    physicians#edit
+                            physician GET    /physicians/:id(.:format)                                                         physicians#show
+                                      PUT    /physicians/:id(.:format)                                                         physicians#update
+                                      DELETE /physicians/:id(.:format)                                                         physicians#destroy
+                           conditions GET    /conditions(.:format)                                                             conditions#index
+                                      POST   /conditions(.:format)                                                             conditions#create
+                        new_condition GET    /conditions/new(.:format)                                                         conditions#new
+                       edit_condition GET    /conditions/:id/edit(.:format)                                                    conditions#edit
+                            condition GET    /conditions/:id(.:format)                                                         conditions#show
+                                      PUT    /conditions/:id(.:format)                                                         conditions#update
+                                      DELETE /conditions/:id(.:format)                                                         conditions#destroy
+                         action_tasks GET    /action_tasks(.:format)                                                           action_tasks#index
+                                      POST   /action_tasks(.:format)                                                           action_tasks#create
+                      new_action_task GET    /action_tasks/new(.:format)                                                       action_tasks#new
+                     edit_action_task GET    /action_tasks/:id/edit(.:format)                                                  action_tasks#edit
+                          action_task GET    /action_tasks/:id(.:format)                                                       action_tasks#show
+                                      PUT    /action_tasks/:id(.:format)                                                       action_tasks#update
+                                      DELETE /action_tasks/:id(.:format)                                                       action_tasks#destroy
+                             patients GET    /patients(.:format)                                                               patients#index
+                                      POST   /patients(.:format)                                                               patients#create
+                          new_patient GET    /patients/new(.:format)                                                           patients#new
+                         edit_patient GET    /patients/:id/edit(.:format)                                                      patients#edit
+                              patient GET    /patients/:id(.:format)                                                           patients#show
+                                      PUT    /patients/:id(.:format)                                                           patients#update
+                                      DELETE /patients/:id(.:format)                                                           patients#destroy
+                        patient_tasks GET    /patient_tasks(.:format)                                                          patient_tasks#index
+                                      POST   /patient_tasks(.:format)                                                          patient_tasks#create
+                     new_patient_task GET    /patient_tasks/new(.:format)                                                      patient_tasks#new
+                    edit_patient_task GET    /patient_tasks/:id/edit(.:format)                                                 patient_tasks#edit
+                         patient_task GET    /patient_tasks/:id(.:format)                                                      patient_tasks#show
+                                      PUT    /patient_tasks/:id(.:format)                                                      patient_tasks#update
+                                      DELETE /patient_tasks/:id(.:format)                                                      patient_tasks#destroy
+                   physician_patients GET    /physicians/:physician_id/patients(.:format)                                      patients#index
+                                      POST   /physicians/:physician_id/patients(.:format)                                      patients#create
+                new_physician_patient GET    /physicians/:physician_id/patients/new(.:format)                                  patients#new
+               edit_physician_patient GET    /physicians/:physician_id/patients/:id/edit(.:format)                             patients#edit
+                    physician_patient GET    /physicians/:physician_id/patients/:id(.:format)                                  patients#show
+                                      PUT    /physicians/:physician_id/patients/:id(.:format)                                  patients#update
+                                      DELETE /physicians/:physician_id/patients/:id(.:format)                                  patients#destroy
+                                      GET    /physicians(.:format)                                                             physicians#index
+                                      POST   /physicians(.:format)                                                             physicians#create
+                                      GET    /physicians/new(.:format)                                                         physicians#new
+                                      GET    /physicians/:id/edit(.:format)                                                    physicians#edit
+                                      GET    /physicians/:id(.:format)                                                         physicians#show
+                                      PUT    /physicians/:id(.:format)                                                         physicians#update
+                                      DELETE /physicians/:id(.:format)                                                         physicians#destroy
+                      sync_conditions GET    /conditions/sync(.:format)                                                        conditions#sync
+            condition_action_programs GET    /conditions/:condition_id/action_programs(.:format)                               action_programs#index
+                                      POST   /conditions/:condition_id/action_programs(.:format)                               action_programs#create
+         new_condition_action_program GET    /conditions/:condition_id/action_programs/new(.:format)                           action_programs#new
+        edit_condition_action_program GET    /conditions/:condition_id/action_programs/:id/edit(.:format)                      action_programs#edit
+             condition_action_program GET    /conditions/:condition_id/action_programs/:id(.:format)                           action_programs#show
+                                      PUT    /conditions/:condition_id/action_programs/:id(.:format)                           action_programs#update
+                                      DELETE /conditions/:condition_id/action_programs/:id(.:format)                           action_programs#destroy
+                                      GET    /conditions(.:format)                                                             conditions#index
+                                      POST   /conditions(.:format)                                                             conditions#create
+                                      GET    /conditions/new(.:format)                                                         conditions#new
+                                      GET    /conditions/:id/edit(.:format)                                                    conditions#edit
+                                      GET    /conditions/:id(.:format)                                                         conditions#show
+                                      PUT    /conditions/:id(.:format)                                                         conditions#update
+                                      DELETE /conditions/:id(.:format)                                                         conditions#destroy
+          action_program_action_tasks GET    /action_programs/:action_program_id/action_tasks(.:format)                        action_tasks#index
+                                      POST   /action_programs/:action_program_id/action_tasks(.:format)                        action_tasks#create
+       new_action_program_action_task GET    /action_programs/:action_program_id/action_tasks/new(.:format)                    action_tasks#new
+      edit_action_program_action_task GET    /action_programs/:action_program_id/action_tasks/:id/edit(.:format)               action_tasks#edit
+           action_program_action_task GET    /action_programs/:action_program_id/action_tasks/:id(.:format)                    action_tasks#show
+                                      PUT    /action_programs/:action_program_id/action_tasks/:id(.:format)                    action_tasks#update
+                                      DELETE /action_programs/:action_program_id/action_tasks/:id(.:format)                    action_tasks#destroy
+                      action_programs GET    /action_programs(.:format)                                                        action_programs#index
+                                      POST   /action_programs(.:format)                                                        action_programs#create
+                   new_action_program GET    /action_programs/new(.:format)                                                    action_programs#new
+                  edit_action_program GET    /action_programs/:id/edit(.:format)                                               action_programs#edit
+                       action_program GET    /action_programs/:id(.:format)                                                    action_programs#show
+                                      PUT    /action_programs/:id(.:format)                                                    action_programs#update
+                                      DELETE /action_programs/:id(.:format)                                                    action_programs#destroy
+    patient_condition_action_programs GET    /patients/:patient_id/conditions/:condition_id/action_programs(.:format)          action_programs#index
+                                      POST   /patients/:patient_id/conditions/:condition_id/action_programs(.:format)          action_programs#create
+ new_patient_condition_action_program GET    /patients/:patient_id/conditions/:condition_id/action_programs/new(.:format)      action_programs#new
+edit_patient_condition_action_program GET    /patients/:patient_id/conditions/:condition_id/action_programs/:id/edit(.:format) action_programs#edit
+     patient_condition_action_program GET    /patients/:patient_id/conditions/:condition_id/action_programs/:id(.:format)      action_programs#show
+                                      PUT    /patients/:patient_id/conditions/:condition_id/action_programs/:id(.:format)      action_programs#update
+                                      DELETE /patients/:patient_id/conditions/:condition_id/action_programs/:id(.:format)      action_programs#destroy
+                   patient_conditions GET    /patients/:patient_id/conditions(.:format)                                        conditions#index
+                                      POST   /patients/:patient_id/conditions(.:format)                                        conditions#create
+                new_patient_condition GET    /patients/:patient_id/conditions/new(.:format)                                    conditions#new
+               edit_patient_condition GET    /patients/:patient_id/conditions/:id/edit(.:format)                               conditions#edit
+                    patient_condition GET    /patients/:patient_id/conditions/:id(.:format)                                    conditions#show
+                                      PUT    /patients/:patient_id/conditions/:id(.:format)                                    conditions#update
+                                      DELETE /patients/:patient_id/conditions/:id(.:format)                                    conditions#destroy
+                                      GET    /patients(.:format)                                                               patients#index
+                                      POST   /patients(.:format)                                                               patients#create
+                                      GET    /patients/new(.:format)                                                           patients#new
+                                      GET    /patients/:id/edit(.:format)                                                      patients#edit
+                                      GET    /patients/:id(.:format)                                                           patients#show
+                                      PUT    /patients/:id(.:format)                                                           patients#update
+                                      DELETE /patients/:id(.:format)                                                           patients#destroy
+                                             /                                                                                 home#index
+                                 root        /                                                                                 home#index

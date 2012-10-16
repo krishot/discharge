@@ -1,0 +1,17 @@
+Tue, 16 Oct 2012 11:43:00 -0700
+doc/README_FOR_APP	Tue, 16 Oct 2012 09:38:14 -0700
+app/controllers/action_programs_controller.rb	Sun, 07 Oct 2012 11:34:16 -0700
+app/controllers/action_tasks_controller.rb	Sun, 07 Oct 2012 13:38:10 -0700
+app/controllers/application_controller.rb	Sat, 06 Oct 2012 16:17:26 -0700
+app/controllers/conditions_controller.rb	Sat, 06 Oct 2012 20:33:06 -0700
+app/controllers/home_controller.rb	Sat, 06 Oct 2012 21:03:39 -0700
+app/controllers/patient_tasks_controller.rb	Sat, 06 Oct 2012 20:33:10 -0700
+app/controllers/patients_controller.rb	Sun, 07 Oct 2012 11:21:35 -0700
+app/controllers/physicians_controller.rb	Sat, 06 Oct 2012 20:33:04 -0700
+app/helpers/application_helper.rb	Sat, 06 Oct 2012 16:17:26 -0700
+app/models/action_program.rb	Tue, 16 Oct 2012 09:20:34 -0700
+app/models/action_task.rb	Sun, 07 Oct 2012 10:53:08 -0700
+app/models/condition.rb	Tue, 16 Oct 2012 11:18:31 -0700
+app/models/patient.rb	Tue, 16 Oct 2012 11:19:06 -0700
+app/models/patient_task.rb	Sun, 07 Oct 2012 10:53:39 -0700
+app/models/physician.rb	Tue, 16 Oct 2012 10:00:14 -0700

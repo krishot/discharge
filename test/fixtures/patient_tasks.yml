@@ -3,11 +3,11 @@
 one:
   name: MyString
   state: MyString
-  action_task: 
-  patient: 
+  action_task_id: 
+  patient_id: 
 
 two:
   name: MyString
   state: MyString
-  action_task: 
-  patient: 
+  action_task_id: 
+  patient_id: 

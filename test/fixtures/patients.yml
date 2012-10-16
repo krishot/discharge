@@ -13,8 +13,7 @@ one:
   mhealth_id: MyString
   physician: 
   conditions: 
-  actions: 
-  alerts: 
+  
 
 two:
   first_name: MyString
@@ -29,5 +28,3 @@ two:
   mhealth_id: MyString
   physician: 
   conditions: 
-  actions: 
-  alerts: 

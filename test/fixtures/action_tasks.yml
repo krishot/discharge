@@ -7,8 +7,7 @@ one:
   state: MyString
   type: 
   category: MyString
-  action_program: 
-
+  
 two:
   name: MyString
   description: MyText
@@ -16,4 +15,4 @@ two:
   state: MyString
   type: 
   category: MyString
-  action_program: 
+  

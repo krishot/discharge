@@ -7,7 +7,7 @@ one:
   phone: MyString
   specialty: MyText
   state: MyString
-  patients: 
+
 
 two:
   first_name: MyString
@@ -16,4 +16,3 @@ two:
   phone: MyString
   specialty: MyText
   state: MyString
-  patients: 
