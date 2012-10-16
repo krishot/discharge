@@ -1,2 +1,9 @@
 Use this README file to introduce your application and point to useful places in the API for learning more.
 Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+                                                                                                            
+
+This app is deployed to Heroku using the git remote path
+
+You may need to precompile the assets depending on your Heroku configuration
+  bundle exec rake assets:precompile
+  

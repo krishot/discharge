@@ -5,11 +5,19 @@ class Patient < ActiveRecord::Base
   has_many :patient_tasks
   has_many :action_tasks, :through => :patient_tasks           
   
+  acts_as_taggable_on :tags
+  
   def name
     "#{self.first_name} #{self.last_name}"  
-  end
+  end    
+  
   def to_s
     self.name
+  end    
+  
+  # Todo add paperclip and profile phot upload
+  def cover_url
+    ["default_patient.jpeg","default_patient2.jpeg"][rand(2)]  
   end
   
 end

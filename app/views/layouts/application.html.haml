@@ -32,21 +32,20 @@
                 -if @physician && @physician.id
                   = link_to "#{@physician.name}", physician_path(@physician)  
                 -else
-                  = link_to "Physicians", physicians_path
-              %li
-                -if @patient && @patient.id 
-                  = link_to "#{@patient.name}", patient_path(@patient)  
-                -else
-                  = link_to "Patients", patients_path
-              %li
-                -if @condition && @condition.id 
-                  = link_to "#{@condition.name}", condition_path(@condition)
-                -else  
-                  = link_to "Conditions", conditions_path
-              %li= link_to "Treatment Programs", action_programs_path
+                  %li= link_to "Physicians", physicians_path
+ 
+              -if @patient && @patient.id 
+                %li= link_to "#{@patient.physician.name}", physician_path(@patient.physician) 
+                 
+              -if @condition && @condition.id  
+                %li= link_to "Conditions", conditions_path      
+                
+              -else  
+                %li= link_to "Conditions", conditions_path
 
-    .container-fluid
+        
 
+    .container-fluid#main_container
       .row-fluid
         .span12
           = yield

@@ -2,6 +2,8 @@ class ActionProgram < ActiveRecord::Base
   belongs_to :condition        
   has_many :action_tasks
   
+  acts_as_taggable_on :tags  
+  
   def to_s
     self.name
   end

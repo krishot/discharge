@@ -28,4 +28,20 @@ rails g bootstrap:themed Conditions
 rails g bootstrap:themed ActionPrograms
 rails g bootstrap:themed ActionTasks  
 rails g bootstrap:themed PatientTasks   
+                                             
 
+Gems & Libs used are listed below.
+
+Rails acts_as_taggable
+  https://github.com/mbleigh/acts-as-taggable-on
+
+jQuery tag autocomplete lib
+  https://github.com/aehlke/tag-it
+
+Masonry.js setup help
+  https://github.com/evenwu/pinterest-clone-layout 
+  jQuery Masonry v2.0.111015 
+
+Masonry ruby gem with a number of helpers.   
+  https://github.com/kristianmandrup/masonry-rails
+ 

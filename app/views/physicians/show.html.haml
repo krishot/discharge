@@ -6,15 +6,16 @@
     = link_to t('.edit', :default => t("helpers.links.edit")), edit_physician_path(@physician), :class => 'btn'
 
 %p
+  %strong= model_class.human_attribute_name(:specialty) + ':'
+  = @physician.specialty
   %strong Contact
   = @physician.email
   = @physician.phone
 %p
-  %strong= model_class.human_attribute_name(:specialty) + ':'
-  = @physician.specialty
-%p
   %h2
     = "Patients"
-    = link_to t('.new', :default => t("helpers.links.new")), new_physician_patient_path(@physician), :class => 'btn btn-primary'       
-  =render :partial => "patients/listing", :locals=>{:patients=>@physician.patients, :model_class=>Patient } 
+    = link_to t('.new', :default => t("helpers.links.new")), new_physician_patient_path(@physician), :class => 'btn btn-primary'    
+  %br   
+  =#render :partial => "patients/listing", :locals=>{:patients=>@physician.patients, :model_class=>Patient } 
+  =render :partial => "patients/grid", :locals=>{:patients=>@physician.patients, :model_class=>Patient }             
 

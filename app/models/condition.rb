@@ -2,8 +2,15 @@ class Condition < ActiveRecord::Base
   has_many :action_programs
   has_many :patients                                         
   
+  acts_as_taggable_on :tags  
+  
   def to_s
     self.name
+  end
+  
+  # Todo add paperclip and condition photo upload
+  def cover_url
+    ["condition_headache.jpeg","condition_chair.jpeg","condition_time.jpeg","condition_med.jpeg"][rand(4)]  
   end
   
 end
