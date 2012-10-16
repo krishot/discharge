@@ -1,3 +1,20 @@
 
 .hero-unit 
-  Doc Says!
+  %h1 Doc Says!
+  %p
+    This is a simple health related task list manager created for the Health2.0 Hackathon October 6th & 7th
+  %p
+    We are not sure if we are going to finish this project so it is up for playing with right now.  
+    The server code is available in my GitHub account.
+    =link_to "DocSays service code", "https://github.com/chipski/discharge", :target=>"new"  
+    
+  #masonry
+    %h2 Screenshots of the iPhone Client
+    .item
+      = image_tag("docsays_task_iphone.png", :alt=>"Task Listing", :width=>"100%") 
+      .comments
+        %h2 Task List
+    .item
+      = image_tag("docsays_meds_iphone.png", :alt=>"Med Listing", :width=>"100%") 
+      .comments
+        %h2 Medication List        
