@@ -4,7 +4,7 @@ gem 'rails', '3.2.8'
 gem 'bundler'     
 #gem 'sqlite3'     
 gem 'mysql', '2.8.1' 
-#gem 'pg', :group => :production 
+gem 'pg', :group => :production 
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -23,6 +23,7 @@ gem 'twitter_bootstrap_form_for'
 
 gem 'acts-as-taggable-on', '~> 2.3.1'
 
+gem 'google-analytics-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

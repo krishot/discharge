@@ -19,6 +19,9 @@ Discharge::Application.configure do
 
   # Generate digests for assets URLs
   config.assets.digest = true
+  
+
+  GA.tracker = "UA-654819-4"
 
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH

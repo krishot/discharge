@@ -33,5 +33,8 @@ Discharge::Application.configure do
   config.assets.compress = false
 
   # Expands the lines which load the assets
-  config.assets.debug = true
+  config.assets.debug = true      
+  
+  GA.tracker = "UA-654819-4" 
+  
 end

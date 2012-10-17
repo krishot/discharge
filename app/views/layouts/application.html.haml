@@ -56,4 +56,6 @@
       Javascripts
       \==================================================
     / Placed at the end of the document so the pages load faster
-    = javascript_include_tag "application"
+    = javascript_include_tag "application"       
+    =# analytics_init if Rails.env.production?
+    = analytics_init 
