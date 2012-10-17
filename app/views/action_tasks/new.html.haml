@@ -1,8 +1,9 @@
 - model_class = ActionTask
 .page-header
-  %h1
-    = "New Task "                                
+  %h1                                
     -if @action_task.action_program 
-      = " > For #{@action_task.action_program }" 
-      = "> In #{@action_task.action_program.condition}"
+      = "#{@action_task.action_program.condition} >" 
+      = " #{@action_task.action_program } >" 
+      
+    = "New Task "
 = render :partial => "form"

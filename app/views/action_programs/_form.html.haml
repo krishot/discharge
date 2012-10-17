@@ -6,7 +6,7 @@
   .control-group
     = f.label :category, :class => 'control-label'
     .controls
-      = f.text_field :category, :class => 'text_field'
+      = f.select :category, ActionProgram.select_category, :class => 'text_field'
   .control-group
     = f.label :description, :class => 'control-label'
     .controls

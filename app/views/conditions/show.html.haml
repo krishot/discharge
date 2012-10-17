@@ -18,5 +18,6 @@
     = link_to t('.new', :default => t("helpers.links.new")), new_condition_action_program_path(@condition), :class => 'btn btn-primary'
     
   %br
-  =render :partial => "action_programs/listing", :locals=>{:action_programs=>@condition.action_programs, :model_class=>ActionProgram }  
+  =#render :partial => "action_programs/listing", :locals=>{:action_programs=>@condition.action_programs, :model_class=>ActionProgram } 
+  =render :partial => "action_programs/grid", :locals=>{:action_programs=>@condition.action_programs, :model_class=>ActionProgram } 
   

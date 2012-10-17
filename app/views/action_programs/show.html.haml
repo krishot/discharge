@@ -12,9 +12,10 @@
   = @action_program.description
 %p
   %h2 
-    ="Patient Actions"
+    ="Included Actions"
     = link_to t('.new', :default => t("helpers.links.new")), new_action_program_action_task_path(@action_program), :class => 'btn btn-primary' 
     
   %br
-  =render :partial => "action_tasks/listing", :locals=>{:action_tasks=>@action_program.action_tasks, :model_class=>ActionTask }  
+  =#render :partial => "action_tasks/listing", :locals=>{:action_tasks=>@action_program.action_tasks, :model_class=>ActionTask }   
+  =render :partial => "action_tasks/grid", :locals=>{:action_tasks=>@action_program.action_tasks, :model_class=>ActionTask }   
   
