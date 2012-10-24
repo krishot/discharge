@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121016161902) do
+ActiveRecord::Schema.define(:version => 20121017185746) do
 
   create_table "action_programs", :force => true do |t|
     t.string   "name"
@@ -34,8 +34,15 @@ ActiveRecord::Schema.define(:version => 20121016161902) do
     t.string   "type"
     t.string   "category"
     t.integer  "action_program_id"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
+    t.datetime "start_at"
+    t.datetime "next_at"
+    t.datetime "end_at"
+    t.string   "schedule"
+    t.string   "rules"
+    t.integer  "iterations",        :default => 0
+    t.integer  "remaining",         :default => 0
   end
 
   add_index "action_tasks", ["action_program_id"], :name => "index_action_tasks_on_action_program_id"
@@ -60,8 +67,15 @@ ActiveRecord::Schema.define(:version => 20121016161902) do
     t.string   "state"
     t.integer  "action_task_id"
     t.integer  "patient_id"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.datetime "start_at"
+    t.datetime "next_at"
+    t.datetime "end_at"
+    t.string   "schedule"
+    t.string   "rules"
+    t.integer  "iterations",     :default => 0
+    t.integer  "remaining",      :default => 0
   end
 
   add_index "patient_tasks", ["action_task_id"], :name => "index_patient_tasks_on_action_task_id"

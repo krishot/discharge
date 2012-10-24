@@ -5,6 +5,8 @@ gem 'bundler'
 #gem 'sqlite3'     
 gem 'mysql', '2.8.1' 
 gem 'pg', :group => :production 
+gem "thin"     
+gem 'capistrano'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -17,29 +19,21 @@ end
 gem 'haml'        
 gem 'haml-rails'
 gem 'jquery-rails'
-
 gem "twitter-bootstrap-rails"
-gem 'twitter_bootstrap_form_for'
+gem 'twitter_bootstrap_form_for'    
+
+gem 'masonry-rails'      
+gem 'google-analytics-rails'
 
 gem 'acts-as-taggable-on', '~> 2.3.1'
 
-gem 'google-analytics-rails'
+gem 'ice_cube'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-gem "thin"     
-gem 'capistrano'
 
 group :development do 
   # To use debugger
   # gem 'ruby-debug19', :require => 'ruby-debug'
+  # Use unicorn as the web server 
   #gem 'unicorn'      
   gem 'rails3-generators'   
   gem "rails-erd", "0.4.3" 
@@ -47,3 +41,9 @@ group :development do
   gem "rspec-rails"
   
 end
+
+# To use ActiveModel has_secure_password
+# gem 'bcrypt-ruby', '~> 3.0.0'
+# To use Jbuilder templates for JSON
+# gem 'jbuilder'
+

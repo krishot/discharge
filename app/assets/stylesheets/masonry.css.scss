@@ -13,7 +13,7 @@ body {
 
 
 .text-shadow {
-  text-shadow: 0 1px 0 white;
+  text-shadow: none;
 }
 
 .wrapper {
@@ -34,15 +34,6 @@ body {
   margin: 0 7px 15px;
   font-size: 12px;
   background: white;
-  //@include box-shadow( 0 1px 3px rgba(34,25,25,0.4) ); 
-  -webkit-box-shadow: inset 0 1px 2px rgba(68, 31, 31, 0.25);
-  -moz-box-shadow: inset 0 1px 2px rgba(68, 31, 31, 0.25);
-  box-shadow: inset 0 1px 2px rgba(68, 31, 31, 0.25);
-  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
-  transition: border linear 0.2s, box-shadow linear 0.2s;
   line-height: 1.5; 
   
   h2 {
@@ -70,14 +61,6 @@ body {
         color: #8c7e7e;
       }
     }
-    .flickrbombWrapper img {
-      margin: 0;
-    }
-    .flickrbombWrapper,
-    img {
-      margin-left: -35px;
-      float: left;
-    }
     b {
       font-weight: bold;
     }
@@ -86,9 +69,6 @@ body {
 }
 .item:focus {
     border-color: rgba(82, 168, 236, 0.8);
-      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-      -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
       outline: 0;
       outline: thin dotted \9;
       /* IE6-9 */    

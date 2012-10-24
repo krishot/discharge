@@ -3,7 +3,7 @@
     .item
       = image_tag(action_task.cover_url, :alt=>action_task.name, :width=>"100%") 
       .comments
-        %h2= link_to action_task.name, action_program_path(action_task) 
+        %h2= link_to action_task.name, action_task_path(action_task) 
       .info
         .infobox
           = action_task.category

@@ -12,7 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs    
-//= require tag-it
-//= require jquery.masonry.min
-//= require twitter/bootstrap
+//   tag-it
+//= require twitter/bootstrap        
+//= require masonry/jquery.masonry    
+//= require masonry/jquery.imagesloaded.min
+//= require masonry/jquery.infinitescroll.min
 //= require_tree .
